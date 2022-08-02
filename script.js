@@ -1,6 +1,15 @@
 'use strict';
 const number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+document.querySelector('.again').addEventListener('click', function () {
+  const number = Math.trunc(Math.random() * 20) + 1;
+  let score = 20;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.score').textContent = 20;
+  document.querySelector('.guess').value = '';
+});
 // document.querySelector('.message').textContent = '☑️ Correct number!';
 // document.querySelector('.number').textContent = number;
 // document.querySelector('.score').textContent = 10;
