@@ -18,6 +18,9 @@ document.querySelector('.check').addEventListener('click', function () {
     //when the player enter the right number
     if (number === guess) {
       document.querySelector('.message').textContent = '☑️ Correct number!';
+      document.querySelector('body').style.backgroundColor = '#60b347';
+      document.querySelector('.number').style.width = '20rem';
+      document.querySelector('.number').textContent = number;
     } else {
       score--;
       document.querySelector('.score').textContent = score;
