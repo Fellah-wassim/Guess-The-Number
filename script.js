@@ -1,16 +1,8 @@
 'use strict';
-const number = Math.trunc(Math.random() * 20) + 1;
+var number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
-document.querySelector('.again').addEventListener('click', function () {
-  const number = Math.trunc(Math.random() * 20) + 1;
-  let score = 20;
-  document.querySelector('.number').textContent = '?';
-  document.querySelector('.message').textContent = 'Start guessing...';
-  document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.score').textContent = score;
-  document.querySelector('.guess').value = '';
-  document.querySelector('.number').style.width = '15rem';
-});
+var highScore = 0;
+
 // document.querySelector('.message').textContent = '☑️ Correct number!';
 // document.querySelector('.number').textContent = number;
 // document.querySelector('.score').textContent = 10;
@@ -31,6 +23,10 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('body').style.backgroundColor = '#60b347';
       document.querySelector('.number').style.width = '20rem';
       document.querySelector('.number').textContent = number;
+      if (score > highScore) {
+        highScore = score;
+        document.querySelector('.highscore').textContent = highScore;
+      }
     } else {
       score--;
       document.querySelector('.score').textContent = score;
@@ -45,4 +41,14 @@ document.querySelector('.check').addEventListener('click', function () {
       }
     }
   }
+});
+document.querySelector('.again').addEventListener('click', function () {
+  number = Math.trunc(Math.random() * 20) + 1;
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.guess').value = '';
+  document.querySelector('.number').style.width = '15rem';
 });
