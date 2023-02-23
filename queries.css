@@ -1,0 +1,63 @@
+@media screen and (max-width: 690px) {
+  html {
+    font-size: 60% !important;
+  }
+  header {
+    height: 40rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+    top: 72%;
+  }
+  .main {
+    margin-top: 8rem;
+    flex-direction: column;
+    height: 50rem;
+    justify-content: center;
+    height: fit-content;
+    gap: 8rem;
+  }
+  .guess {
+    padding: 1rem;
+    width: 15rem;
+  }
+  .number {
+    padding: 1rem 0rem;
+  }
+  .right {
+    width: auto;
+    font-size: 1.8rem;
+  }
+  .left {
+    width: auto;
+  }
+  .message {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  .again {
+    top: 8rem;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  header {
+    height: 28rem;
+  }
+  .main {
+    margin-top: 6rem;
+    gap: 2rem;
+  }
+  .message {
+    font-size: 1.6rem;
+  }
+  .guess {
+    margin-bottom: 2rem;
+  }
+}

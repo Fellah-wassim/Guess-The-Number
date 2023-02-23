@@ -1,4 +1,5 @@
 'use strict';
+
 var number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 var highScore = 0;
@@ -44,6 +45,7 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
+
 document.querySelector('.again').addEventListener('click', function () {
   number = Math.trunc(Math.random() * 20) + 1;
   score = 20;
